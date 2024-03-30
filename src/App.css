@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px;*/
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -28,13 +28,18 @@ body {
 
 
 .wrapper {
+  width: 1280px;
+  height: auto;
+}
+.grid-container {
   display: grid;
   grid-gap: 15px;
-  grid-template-columns: [col1-start] 20vw  [col2-start] 20vw  [col3-start] 20vw [col3-end];
-  grid-template-rows: [row1-start] 5vh [row2-start] 40vh [row3-start] 20vh [row3-end];
+
+  grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [col4-start] 1fr [col4-end];
+  grid-template-rows: [row1-start] 5vh [row2-start] 50vh [row3-start] 30vh [row3-end];
   color: #444;
-  height: auto;
-  width: auto;
+  /*height: auto;*/
+  /*width: auto;*/
 }
 
 .box {
@@ -48,16 +53,16 @@ body {
 }
 
 .a {
-  grid-column: col1-start / col3-end;
+  grid-column: col1-start / col4-end;
   grid-row: row1-start;
 }
 
 .b {
-  grid-column: col1-start / col3-start;
+  grid-column: col1-start / col4-start;
   grid-row: row2-start ;
 }
 .c {
-  grid-column: col3-start ;
+  grid-column: col4-start / col4-end ;
   grid-row: row2-start / row3-end;
   display: flex;
   align-items: flex-start;
@@ -69,4 +74,8 @@ body {
 .e {
   grid-column: col2-start ;
   grid-row: row3-start ;
+}
+.f {
+  grid-column: col3-start;
+  grid-row: row3-start;
 }
