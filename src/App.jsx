@@ -11,7 +11,10 @@ function App() {
     useState("placeholder");
   const [totalCharacters, setTotalCharacters] = useState(0);
   const [totalComics, setTotalComics] = useState(0);
-  const [characterAvailable, setCharacterAvailable] = useState(0); // New state
+  const [characterAvailable, setCharacterAvailable] = useState(0);
+
+  const [mostAppearedCharacter, setMostAppearedCharacter] = useState(null);
+  const [leastAppearedCharacter, setLeastAppearedCharacter] = useState(null);
 
   const handleSelectCharacter = (name, description, thumbnail, available) => {
     setCharacterName(name);
